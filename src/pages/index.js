@@ -130,6 +130,20 @@ const IndexPage = () => {
   return (
     <main style={pageStyles}>
       <title>Home Page</title>
+      <p>Hola mundo de qiip</p>
+      <ul>
+        <li><a href="about">Nosotros</a></li>
+        <li><a href="registro">Registro</a></li>
+        <li><a href="second">App angular 1</a></li>
+        <li><a href="third/index.html">App angular 2</a></li>
+        <li><a href="seguros/index.html">Seguros</a></li>
+        <li><a href="soporte/index.html">Operaciones</a></li>
+      </ul>
+      <div style={{ color: `purple` }}>
+        <h1>Hello Gatsby!</h1>
+        <p>What a world.</p>
+        <img src="https://source.unsplash.com/random/400x200" alt="" />
+      </div>
       <h1 style={headingStyles}>
         Congratulations
         <br />

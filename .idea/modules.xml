@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/my-gatsby-site.iml" filepath="$PROJECT_DIR$/.idea/my-gatsby-site.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/suam_spykes.iml" filepath="$PROJECT_DIR$/../.idea/suam_spykes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../suam/webappoperaciones/.idea/webappoperaciones.iml" filepath="$PROJECT_DIR$/../../suam/webappoperaciones/.idea/webappoperaciones.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../suam/webappseguros/.idea/webappseguros.iml" filepath="$PROJECT_DIR$/../../suam/webappseguros/.idea/webappseguros.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../suam/webcomponentsqiip/.idea/webcomponentsqiip.iml" filepath="$PROJECT_DIR$/../../suam/webcomponentsqiip/.idea/webcomponentsqiip.iml" />
+    </modules>
+  </component>
+</project>
