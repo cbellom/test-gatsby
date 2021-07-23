@@ -1,0 +1,115 @@
+@import "var";
+@import "modals";
+@import "mixin";
+@import "mediaqueries";
+
+/*Buttons*/
+button.mat-button{
+  font-family: inherit;
+  line-height: normal;
+}
+.mat-button.btns-primary {
+  @include btns(0px transparent,4px, 14px, $colorWhite, 20px, $fontSecond-R, normal, 225px, $colorPurple);
+  &:hover {
+    background: $colorPurple2;
+  }
+  &[disabled][disabled]{
+    opacity: 0.5;
+    color: $colorGrey40;
+    background: $colorGrey;
+  }
+}
+.mat-button.btns-secondary {
+  @include btns(2px $colorPurple, 25px, 8px, $colorPurple, 16px, $fontSecond-B, bold, 225px, transparent);
+  min-width: 146px;
+  &:hover,&[disabled][disabled]:hover {
+    background: $colorPurple;
+    color: $colorWhite;
+  }
+  &[disabled][disabled], 
+  &.disabled{
+    opacity: 0.5;
+    color: $colorPurple;
+  }
+}
+
+span.mat-button.btns-secondary {
+  padding:0 16px;
+}
+
+.mat-button.btns-secondary.btns-sec-red {
+  border-color: $colorRed;
+  color: $colorRed;
+  &:hover {
+    background: $colorRed;
+    color: $colorWhite;
+  }
+}
+.mat-button.clear-bg{
+  &:hover{
+    background: $colorPurple;
+  }
+  &:disabled{
+    opacity: .5;
+  }
+}
+.mat-button.dark-bg{
+  background:$colorGreen;
+  &:hover{
+    background: darken($colorGreen,5%);
+  }
+  &:disabled{
+    background: $colorGreen3;
+  }
+  &[disabled][disabled]{
+    opacity: 1;
+    color: $colorGrey40;
+    background: $colorGrey;
+  }
+}
+
+.mat-button.btns-secondary.dark-bg {
+  border-color: $colorWhite;
+  color: $colorWhite;
+  background: transparent;
+  padding: 10px 39px;
+  &:hover{
+    border-color: $colorWhite;
+    background: $colorWhite;
+    color: $colorGreen;
+  }
+  &:disabled{
+    background: $colorGreen3;
+  }
+  &[disabled][disabled]{
+    opacity: 1;
+  }
+}
+article {
+  & .add-button:hover, 
+  & .add-button:focus {
+   .mat-button-focus-overlay{
+     background: transparent;
+   }
+} 
+}
+/*End buttons*/
+
+/*estilos generales*/
+h1,h2,h3,h4,h5,h6 {
+  font-family: $fontPrimary;
+}
+
+p, a, ul li, ol, li, input, select, textarea {
+  font-family: $fontSecond-R;
+}
+
+strong, b, .link, th {
+  font-family: $fontSecond-B;
+}
+
+table td {
+  font-family: $fontSecond-R;
+}
+
+/*fin de estilos generales*/

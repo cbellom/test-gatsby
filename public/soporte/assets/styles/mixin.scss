@@ -1,0 +1,131 @@
+@mixin font-face($name, $src, $weight, $style) {
+  @font-face {
+    font-family: $name;
+    src: url(quote($src + '.eot')),
+      url(quote($src + '.eot?iefix')) format('embedded-opentype'),
+      url($src+'.woff') format('woff');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+@include font-face(
+  GeomanistWord-Bold,
+  / assets/fonts/GeomanistWord-Bold,
+  normal,
+  normal
+);
+@include font-face(
+  Bariol_Regular,
+  / assets/fonts/bariol_regular,
+  normal,
+  normal
+);
+@include font-face(
+  Bariol_Regular_Italic,
+  / assets/fonts/bariol_regular_italic,
+  normal,
+  italic
+);
+@include font-face(Bariol_Bold, / assets/fonts/bariol_bold, normal, normal);
+
+@mixin btns(
+  $border,
+  $radius,
+  $padding,
+  $color,
+  $font-size,
+  $family,
+  $weight,
+  $width,
+  $bg
+) {
+  border: solid $border;
+  border-radius: $radius;
+  padding: $padding $padding * 2;
+  color: $color;
+  font-size: $font-size;
+  font-weight: $weight;
+  font-family: $family;
+  min-width: $width;
+  background: $bg;
+  transition: all 0.4s;
+  overflow: hidden;
+  &:focus,
+  &:visited {
+    outline: 0;
+  }
+  &:hover {
+    .mat-button-focus-overlay {
+      opacity: 0;
+      background: none;
+    }
+  }
+}
+
+@mixin link($color, $size-font, $weight) {
+  color: $color;
+  font-size: $size-font;
+  font-weight: $weight;
+}
+
+@mixin icons($bgi, $width, $height, $margin) {
+  background: $bgi;
+  width: $width;
+  height: $height;
+  display: inline-block;
+  vertical-align: middle;
+  margin: $margin;
+}
+
+@mixin media($consulta) {
+  $media-xxs: '(max-width : 320px)'; // iPhone Retina
+  $media-xs: '(max-width : 480px)'; // Telefonos
+  $media-sm: '(max-width: 768px)'; // Tablets
+  $media-md: '(max-width: 992px)'; // Escritorios
+  $media-lg: '(max-width: 1200px)'; // Resoluciones grandes
+  $media-xlg: '(max-width: 1600px)'; // Resoluciones extragrandes
+
+  @if $consulta == xxs {
+    @media #{$media-xxs} {
+      @content;
+    }
+  }
+  @if $consulta == xs {
+    @media #{$media-xs} {
+      @content;
+    }
+  } @else if $consulta == sm {
+    @media #{$media-sm} {
+      @content;
+    }
+  } @else if $consulta == md {
+    @media #{$media-md} {
+      @content;
+    }
+  } @else if $consulta == lg {
+    @media #{$media-lg} {
+      @content;
+    }
+  } @else if $consulta == xlg {
+    @media #{$media-xlg} {
+      @content;
+    }
+  }
+}
+
+@keyframes entrada {
+  0% {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.fade-b-t {
+  animation: entrada 0.5s ease;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
